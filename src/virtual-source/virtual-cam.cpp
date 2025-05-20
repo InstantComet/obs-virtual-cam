@@ -242,10 +242,10 @@ bool CVCamStream::ListSupportFormat()
 	if (format_list.size() > 0)
 		format_list.clear();
 
-	format_list.push_back(struct format(1920, 1080, 333333));
-	format_list.push_back(struct format(1280, 720, 333333));
-	format_list.push_back(struct format(960, 540, 333333));
-	format_list.push_back(struct format(640, 360, 333333));
+	format_list.push_back(struct format(1920, 1080, 200000));
+	format_list.push_back(struct format(1280, 720, 200000));
+	format_list.push_back(struct format(960, 540, 200000));
+	format_list.push_back(struct format(640, 360, 200000));
 
 	return true;
 }
@@ -434,7 +434,7 @@ HRESULT STDMETHODCALLTYPE CVCamStream::GetStreamCaps(int iIndex,
 	pvi->bmiHeader.biWidth = format_list[iIndex].width;
 	pvi->bmiHeader.biHeight = format_list[iIndex].height;
 	pvi->AvgTimePerFrame = format_list[iIndex].time_per_frame;
-	pvi->AvgTimePerFrame = 333333;
+	pvi->AvgTimePerFrame = 200000;
 	pvi->bmiHeader.biCompression = MAKEFOURCC('Y', 'U', 'Y', '2');
 	pvi->bmiHeader.biBitCount = 16;
 	pvi->bmiHeader.biSize = sizeof(BITMAPINFOHEADER);

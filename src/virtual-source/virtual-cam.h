@@ -134,10 +134,10 @@ private:
 	REFERENCE_TIME prev_end_ts = 0;
 
 	//obs format related
-	bool use_obs_format_init = false;
+	bool use_obs_format_init = true;
 	int obs_format = 0;
 	uint32_t obs_width = 1920;
 	uint32_t obs_height = 1080;
-	uint64_t obs_frame_time = 333333;
+	uint64_t obs_frame_time = 200000;
 	dst_scale_context scale_info;
 };
