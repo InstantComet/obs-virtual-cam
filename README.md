@@ -1,3 +1,5 @@
+# The hard-coded FPS was changed from 30 to 50
+
 # OBS-VirtualCam
 
 ![CI Windows On-Push](https://github.com/miaulightouch/obs-virtual-cam/actions/workflows/main.yml/badge.svg)
